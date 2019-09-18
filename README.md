@@ -1,7 +1,7 @@
 shadowsocks-libev
 =========
 
-A role for configuring shadowsocks-libev components
+A [role](https://galaxy.ansible.com/yousong/shadowsocks_libev) for configuring shadowsocks-libev components
 
 Requirements
 ------------
