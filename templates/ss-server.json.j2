@@ -1,0 +1,2 @@
+{% set instance = lookup('vars', 'shadowsocks_libev_server_' + item) -%}
+{{ instance | tojson(indent=2) }}

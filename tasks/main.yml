@@ -1,0 +1,9 @@
+---
+- include_tasks: "{{ ansible_os_family | lower }}_packages.yml"
+  tags:
+    - install
+
+- include_tasks: configure_server.yml
+  with_items: "{{ shadowsocks_libev_servers }}"
+  tags:
+    - configure

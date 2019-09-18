@@ -1,0 +1,7 @@
+---
+shadowsocks-libev-servers: []
+#shadowsocks-libev-server-ss0:
+#  server: 0.0.0.0
+#  server_port: 65535
+#  password: "739ceb6b28f2a763"
+#  method: chacha20-ietf-poly1305

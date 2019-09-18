@@ -1,0 +1,21 @@
+---
+- name: Configure {{ item }}
+  template:
+    src: ss-server.json.j2
+    dest: /etc/shadowsocks-libev/{{ item }}.json
+    owner: nobody
+    group: nobody
+    mode: 0600
+  register: configuration
+
+- name: Enable shadowsocks-libev-server@{{ item }} service
+  service:
+    name: shadowsocks-libev-server@{{ item }}
+    state: started
+    enabled: yes
+
+- name: Restart shadowsocks-libev-server@{{ item }}
+  service:
+    name: shadowsocks-libev-server@{{ item }}
+    state: restarted
+  when: configuration is changed
